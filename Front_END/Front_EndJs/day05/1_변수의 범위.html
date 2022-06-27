@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수의 범위</title>
+    <script>
+      let num2 = 100;
+
+      function f1() {
+        let num1 = 100; // 함수 내에 선언
+        console.log(num2);
+        let num2 = 300; // 동명이인의 num2를 만든것
+      }
+
+      f1();
+      function f2() {
+        console.log(num2); // 전역변수는 어떠한 함수에서도 접근가능
+      }
+
+      console.log("-----------------");
+      function f3() {
+        console.log(num2); //100
+        let num2 = 200; //전역변수 값에 변동   만약 선언하면 지역변수로됨
+        console.log(num2); //200
+      }
+      f3();
+
+      /* let num2 = 100;
+      function f3() {
+        console.log(num2); // 호이스팅 에러
+        let num2 = 200;
+        console.log(num2);
+      }
+      f3();
+       */
+      function f4() {}
+    </script>
+  </head>
+  <body></body>
+</html>

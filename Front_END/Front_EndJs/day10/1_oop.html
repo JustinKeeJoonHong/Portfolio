@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+    <script>
+      /*  클래스의 설계도
+        interface 자판기기능{
+            자판기뽑기()
+            자판기구동()
+            자판기정지()
+            자판기청소()
+        } */
+
+      class 자판기 {
+        // implements 자판기기능
+        //생성자
+        //객체를 만들어낼 때 받아야 하는 데이터
+        constructor(자판기종류) {
+          this.자판기종류 = 자판기종류; // 클래스내에서 사용하는 변수 = 매개변수
+          this.자판기상태 = false;
+        }
+
+        자판기상태변경() {
+          if (this.자판기상태 === false) {
+            this.자판기상태 = true;
+          } else {
+            this.자판기상태 = false;
+          }
+        }
+
+        자판기구동() {
+          if (this.자판기상태 === true) {
+            console.log("자판기가 이미 가동중입니다.");
+          } else {
+            this.자판기상태 = true;
+            console.log("자판기가 구동되었습니다.");
+          }
+        }
+
+        자판기정지() {
+          if (this.자판기상태 === false) {
+            console.log("자판기가 이미 정지중입니다.");
+          } else {
+            this.자판기상태 = false;
+            console.log("자판기가 정지되었습니다.");
+          }
+        }
+
+        자판기청소() {
+          if (this.자판기상태 === false) {
+            console.log("자판기를 청소하였습니다.");
+          } else {
+            console.log("자판기를 먼저 정지해주세요");
+          }
+        }
+
+        자판기뽑기(coin) {
+          if (this.자판기상태 === true) {
+            if (this.자판기종류 === "drink") {
+              if (coin === 300) {
+                console.log("솔의 눈");
+              } else if (coin === 500) {
+                console.log("비타 500");
+              } else if (coin === 1000) {
+                console.log("콜라");
+              } else {
+                console.log("금액을 잘못 투입하셨습니다.");
+              }
+            }
+          } else {
+            console.log("자판기가 정지되어있습니다.");
+          }
+        }
+      }
+
+      //객체 생성 중
+      const 음료자판기 = new 자판기("drink"); //new 자판기 = constructor
+      //   음료자판기.자판기구동();
+      음료자판기.자판기뽑기(300);
+      음료자판기.자판기상태변경();
+      console.log(음료자판기.자판기상태);
+      음료자판기.자판기뽑기(300);
+      음료자판기.자판기뽑기(500);
+    </script>
+  </head>
+  <body></body>
+</html>

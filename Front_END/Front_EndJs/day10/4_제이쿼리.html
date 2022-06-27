@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제이쿼리</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <h2>제이쿼리</h2>
+    <p id="text">변경될 문자열입니다.</p>
+    <button>문자 변경</button>
+  </body>
+  <script>
+    // windowonload 와 비슷함
+    $(() => {
+      //$(function(){} 와 같음
+      alert("제이쿼리 시작");
+
+      let fontsize = 25;
+
+      $("button").on("click", () => {
+        console.log("test"); // 이런 console.log를 통해 23번줄이 오류가 있는지 확인 가능
+        $("#text").css("font-size", `${fontsize}px`);
+        $("#text").attr("class", "change");
+      });
+    });
+  </script>
+</html>

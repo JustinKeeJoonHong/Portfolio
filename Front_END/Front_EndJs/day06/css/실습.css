@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  height: 3rem;
+  background-color: gray;
+  z-index: 100;
+}
+
+.hide_menu {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 0px;
+  background-color: blanchedalmond;
+  transition: all 1s;
+  opacity: 0;
+  top: 3rem;
+}
+
+.on {
+  height: 15rem;
+  opacity: 1;
+}
+
+/*  중간파트 */
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+#banner {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bannerBox {
+  width: 1080px;
+  overflow: hidden;
+}
+
+#bannerBox > ul {
+  width: 1080px;
+  height: 60vh;
+  transition: all 1s;
+  display: inline-flex;
+}
+
+#bannerBox > ul > li {
+  min-width: 1080px;
+  min-height: 60vh;
+  text-align: center;
+  border-radius: 40px;
+}
+
+section > div > ul > li:nth-child(1) {
+  background: url(../../../cowimg/new1.jpg) center;
+  background-size: cover;
+}
+
+section > div > ul > li:nth-child(2) {
+  background: url(../../../cowimg/new2.jpg) center;
+  background-size: cover;
+}
+
+section > div > ul > li:nth-child(3) {
+  background: url(../../../cowimg/new3.jpg) center;
+  background-size: cover;
+}
+
+section > div > ul > li:nth-child(4) {
+  background: url(../../../cowimg/new4.jpg) center;
+  background-size: cover;
+}
+
+section > div > ul > li:nth-child(5) {
+  background: url(../../../cowimg/new5.jpg) center;
+  background-size: cover;
+}
+
+#prevBtn,
+#nextBtn {
+  cursor: pointer;
+  border: 10px solid gray;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 999;
+  margin: 0 10px;
+}
+
+#circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: aqua;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}

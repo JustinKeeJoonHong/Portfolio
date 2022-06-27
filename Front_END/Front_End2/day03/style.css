@@ -1,0 +1,26 @@
+footer{
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section{
+    font-size: 50px;
+    color: #fff; 
+    text-shadow: 5px 5px 5px #000;
+}
+#menu1{
+    background-image: url(../img/dish1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+section div{
+    border: 1px solid black;
+}

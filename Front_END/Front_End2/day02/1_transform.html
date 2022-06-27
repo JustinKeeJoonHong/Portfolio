@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        body{
+            margin-left: 100px;
+        }
+
+        p{
+            width: 400px;
+            padding: 15px;
+            border: 3px solid navy;
+        }
+
+        #trans1{
+            background-color: deeppink;
+            transform: translate(30px, 30px);
+        }
+
+        #trans2{
+            background-color: aquamarine;
+            transform: rotate(60deg); /* deg = 각도 의미 */
+        }
+
+        #trans3{
+            background-color: skyblue;
+            transform: scale(1.5, 1.2); /* x축 1.5배 y축 1.2qo */
+        }
+
+        #trans4{
+            background-color: gold;
+            transform: skew(30deg, 15deg);
+        }
+
+        #gradient{
+            background: linear-gradient(to left,green ,aquamarine 40% , red 30%, yellow);
+        }
+
+        #gradient2{
+            background: radial-gradient(red,blue);
+        }
+    </style>
+</head>
+<body>
+    <h2>transform</h2>
+    <p>orginal</p>
+    <p id="trans1">translate</p>
+    <p id="trans2">rotate</p>
+    <p id="trans3">scale</p>
+    <p id="trans4">skew</p>
+    <p id="gradient">gradient</p>
+    <p id="gradient2">gradient</p>
+</body>
+</html>

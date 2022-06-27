@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈</title>
+    <script>
+      /*
+      이름 : 홍기준
+      국어 : 자유
+      수학 : 자유
+      영어 : 50
+      탐구 : 40
+
+      평균을 구하여
+      90이상이면 A학점
+      80이상이면 B학점
+      70이상이면 C학점
+      60이상이면 D학점을 이름과 함께, 콘솔에 찍히게
+
+      if문과 switch/case 문 연산자를 이용
+      */
+      const name = "홍기준";
+      const kor = 80;
+      const math = 100;
+      const eng = 80;
+      const tam = 100;
+
+      let result = kor + math + eng + tam;
+      let 평 = result / 4;
+      let 학점;
+
+      if (평 >= 90) {
+        학점 = "A";
+      } else if (평 >= 80) {
+        학점 = "B";
+      } else if (평 >= 70) {
+        학점 = "C";
+      } else if (평 >= 60) {
+        학점 = "D";
+      } else {
+        학점 = "F";
+      }
+
+      switch (학점) {
+        case "A":
+          console.log(name, "은", 학점, "학점입니다.");
+          break;
+        case "B":
+          console.log(name, "은", 학점, "학점입니다.");
+          break;
+        case "C":
+          console.log(name, "은", 학점, "학점입니다.");
+          break;
+        case "D":
+          console.log(name, "은", 학점, "학점입니다.");
+          break;
+        case "F":
+          console.log(name, "은", 학점, "학점입니다.");
+          break;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

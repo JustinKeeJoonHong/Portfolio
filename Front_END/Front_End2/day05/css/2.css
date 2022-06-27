@@ -1,0 +1,41 @@
+#menu{
+    background-color: antiquewhite;
+    display: flex;
+    visibility: hidden;
+    transition: all 1s ease;
+    list-style: none;
+    justify-content: space-around;
+    /* width: 40vw; */
+    /* height: 0%; */
+    opacity: 0;
+}
+
+
+/* input[type="checkbox"] */
+#click{
+    display: none;
+}
+
+        /*label[for="click"] or id 값 */
+#click + label {
+    display: inline-block;
+    background: url(../img/8679886_checkbox_blank_line_icon\ \(1\).png);
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+#click:checked + label{
+    display: inline-block;
+    background: url(../img/8679969_checkbox_line_icon.png);
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+#click:checked ~ #menu{
+    visibility: visible;
+    /* width: 100vw; */
+    /* height: 30%; */
+    opacity: 1;
+}

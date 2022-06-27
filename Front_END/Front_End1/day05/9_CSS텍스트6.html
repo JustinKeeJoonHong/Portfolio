@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS텍스트6</title>
+    <style>
+        .content{
+            border: 3px solid #f00; 
+            width: 600px; 
+            padding: 10px; 
+            white-space:nowrap; /*공백과 줄바꿈을 처리하는데 nowrap을 줄바꿈을 하지 않고  공백 허용 x // 연속 공백허용 pre*/
+            overflow: hidden;  /* 스크롤을 보이지 않게한다*/
+            text-overflow: ellipsis;} /*말줄임표*/
+        .content:hover{
+            overflow:visible;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS텍스트6</h2>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex voluptates quam maxime explicabo distinctio provident ad, eius hic corrupti. Dignissimos unde optio vitae atque aperiam quaerat dicta vel esse? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, possimus dolores. Incidunt tempore eaque odio quisquam reiciendis. Dicta neque non, nihil, voluptates repellendus natus delectus cupiditate debitis placeat asperiores dolor.</p>
+</body>
+</html>

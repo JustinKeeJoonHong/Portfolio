@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼항연산자</title>
+    <script>
+      let num = 5;
+
+      // if문
+      if (num > 4) {
+        console.log("참");
+      } else {
+        console.log("거짓");
+      }
+      // 삼항연산자
+      num > 4
+        ? console.log("참")
+        : num < 4
+        ? console.log("참")
+        : console.log("거짓");
+
+      num > 4 ? console.log("참") : console.log("거짓");
+
+      num > 4 && console.log("참");
+      // === num > 4 ? console.log("참") : null;
+
+      num && console.log("실행할까요?");
+      // num에 값이 있냐 없냐에 따라 실행함  (불린타입으로 생각 / 값이 있으므로 true)
+      // 0은 거짓으로 인식
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백지옥</title>
+    <script>
+      let number = 5;
+
+      const errCallback = (err) => {
+        console.log(err); // 에러 발생시 에러를 콘솔에 찍어주는 함수
+      };
+
+      const callback = (number, callback) => {
+        // 비동기 상황 가정
+        number = number + 1;
+        console.log(number);
+        if (callback) {
+          setTimeout(callback, 500, number);
+        }
+      };
+      // 로직 신경쓸 필요 X
+      callback(
+        number,
+        function (number) {
+          callback(
+            number,
+            function (number) {
+              callback(number);
+            },
+            errCallback()
+          );
+        },
+        errCallback()
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

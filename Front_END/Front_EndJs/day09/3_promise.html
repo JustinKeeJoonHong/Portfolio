@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+    <script>
+      let number = 5;
+
+      const callback = (number) => {
+        number = number + 1;
+
+        setTimeout(() => {
+          console.log(number);
+        }, 500);
+
+        return number;
+      };
+
+      const promise = new Promise((resolve, reject) => {
+        console.log(callback(number)); // --> 6
+
+        resolve(callback(number));
+        // 성공하면 이 함수의 리턴값이 해당 함수 ---> 6
+
+        reject("실패");
+        // 실패
+      });
+
+      promise
+        // then = 실행했는지
+        //이 부분의 인자로 전달됨 ( resolve로 리턴값이 해당 함수로 가면서 인자로)
+        .then((result) => {
+          return callback(result); //결과값
+        })
+        .then((result) => {
+          return callback(result);
+        })
+        .then((result) => {
+          return callback(result);
+        })
+        .then((result) => {
+          return callback(result);
+        })
+        .then((result) => {
+          return callback(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      let state = false;
+      const promiseBoolean = new Promise((resolve, reject) => {
+        if (state) {
+          resolve("성공");
+        } else {
+          reject("실패");
+        }
+      });
+
+      promiseBoolean
+        .then((message) => {
+          console.log(message);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
