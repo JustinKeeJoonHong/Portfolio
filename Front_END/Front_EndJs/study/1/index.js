@@ -71,3 +71,15 @@ for (let i = 0; i < string.length; i++) {
   }
 }
 console.log(count1);
+
+let num2 = "10" + 2;
+console.log(num2);
+
+function isFalsy(v) {
+  return !v;
+}
+
+console.log(isFalsy(false));
+
+console.log(Number(true)); // 1
+console.log(parseInt(true)); // NaN

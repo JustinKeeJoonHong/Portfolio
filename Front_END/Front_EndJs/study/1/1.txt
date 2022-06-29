@@ -1,0 +1,48 @@
+변수(식별자)
+    naming convention (네이밍 컨밴션)
+
+    카멜 케이스  // 일반적으로 변수나 함수
+    var firstName;
+
+    스네이크 케이스
+    var first_name;
+
+    파스칼 케이스  // 일반적으로 생성자 함수, 클래스의 이름
+    var FirstName;
+
+    헝가리언 케이스
+    var strFirstName; // type + identifier
+    var $elem = document.getElementById("myId"); // DOM 노드
+    var observable$ = fromEvent(document, 'click'); //RxJS 옵저버블
+
+값
+    값은 식(표현식)이 평가되어 생성된 결과
+
+리터럴 literal
+    사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 나타내는 표기법
+
+표현식
+    값으로 평가될 수 있는 문 / 표현식이 평가되면 새로운 값을 생성 or 기존값을 참조 
+
+문
+    프로그램을 구성하는 기본 단위이자 최소 실행 단위 / 여러 토큰으로 구성됨 
+    토큰 -> 문법적인 의미를 가지며, 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미
+
+// 변수에 할당할 수 있으면 표현식인 문 , 없으면 표현식이 아닌 문 ex) var foo = var x; (var x 를 foo에 할당할 수 없음)
+
+단항 산술 연산자
+    증가/감소(++/--) 연산자는 위치에 따라 의미가 다름
+        피연산자 앞에 위치하면 피연산자의 값을 증가/감소시킨 후, 다른 연산을 수행
+        피연산자 뒤에 위치하면 다른 연산을 수행한 후, 피연산자의 값을 증가/감소 시킴
+
+        e) var x = 5, result;
+        result = x ++;
+        console.log(result,x); // 5,6
+
+         var x = 5, result;
+        result = ++x;
+        console.log(result,x); // 6,6
+
+
+        
+    
