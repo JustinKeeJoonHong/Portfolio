@@ -1,0 +1,17 @@
+논리 연산자를 이용한 단축 평가
+
+좌항에서 우항으로 계산
+A || B
+    A가 true일 경우 -> A를 반환
+    A가 false일 경우 -> B를 반환
+
+A && B
+    A가 true일 경우 -> B를 반환
+    A가 false일 경우 -> A를 반환
+
+프로퍼티 접근
+    마침표 / 대괄호 표기법
+    obj{
+        name:'hong'
+    };
+    obj.name / obj['name'] 
