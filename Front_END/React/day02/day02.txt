@@ -126,7 +126,7 @@ Styled-components
 <LoginForm/>
 
 const LoginForm = style.div`
-    ..css 속설
+    ..css 속성
 `
 라이브러리 설치
 npm i styled-components
