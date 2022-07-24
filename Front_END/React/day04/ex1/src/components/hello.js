@@ -9,3 +9,5 @@ const Hello = ({ name, color, isLover }) => {
   );
 };
 export default Hello;
+
+/* 컴포넌트로 만든 것은 태그형태로 불러온다 (user.js에 <hello/> 이부분을 의미) */

@@ -1,5 +1,7 @@
 vscode-styled-components
 
+해당 프로젝트 안에서 npm i styled-components 를 해야함
+
 내일 배울 것
 
 삼항연산자, 조건부랜더링 
