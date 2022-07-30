@@ -8,7 +8,7 @@ const Callback = () => {
     } else {
       setColor("red");
     }
-  }, []);
+  }, [color]);
 
   return (
     <>
