@@ -1,4 +1,5 @@
 const Hello = ({ name, color, isLover }) => {
+  console.log({ name, color, isLover });
   return (
     <div style={color && { color: color }}>
       안녕하세요 {name}님!

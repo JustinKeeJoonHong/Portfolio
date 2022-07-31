@@ -1,11 +1,25 @@
-import { useState } from "react";
-
+import { useState, useContext, useCallback } from "react";
+import { ADD_STATE, Context } from "../reducer/context";
+/* 중괄호 안에는 이름 틀리면 안됨 , 대괄호안에는 맘대로 가능 */
 const AddState = () => {
-  const [name, setName] = useState("");
-  const onChangeInput = (e) => {
-    setName(e.target.value);
-  };
+  const { state, dispatch } = useContext(Context);
 
+  const [name, setName] = useState("");
+  const onChangeInput = useCallback(
+    (e) => {
+      setName(e.target.value);
+    },
+    [setName]
+  );
+
+  const onAddState = useCallback(() => {
+    dispatch({
+      type: ADD_STATE,
+      id: state[state.length - 1].id + 1,
+      name: name,
+    });
+    setName("");
+  }, [state, name, dispatch]);
   return (
     <>
       <input
@@ -14,7 +28,7 @@ const AddState = () => {
         value={name}
         onChange={onChangeInput}
       />
-      <button>추가</button>
+      <button onClick={onAddState}>추가</button>
       <button>초기화</button>
     </>
   );
